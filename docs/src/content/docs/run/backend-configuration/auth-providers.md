@@ -1,8 +1,8 @@
 ---
-title: OAuth2
-description: Enable OAuth2 providers
+title: Configure Authentication Providers
+description: Adjust login methods
 redirectFrom:
-  - /run/backend-configuration/#oauth
+  - /run/backend-configuration/#auth-providers
 ---
 
 ### Create an OAuth app
@@ -18,5 +18,16 @@ In any case, once you have successfully created your OAuth app you will receive 
 ### Enable a provider in PocketBase
 ![Pocketbase OAuth](../../../../assets/guides/pocketbase_oauth.png)
 
-In the PocketBase admin panel navigate to the `users` table. Click the gear icon at the top to open the table's settings and navigate to `Options`. 
+In the PocketBase admin panel navigate to the `users` table. Click the gear icon at the top to open the table's settings and navigate to `Options`.
 In the tab `OAuth2`, add your provider and fill in the Client ID and Client Secret from the step before and save your changes.
+
+### Disable password authentication
+
+After enabling the neccessary OAuth2 providers for your application you may want to disable the standard local password authentication.
+
+![Pocketbase OAuth](../../../../assets/guides/pocketbase_password.png)
+
+In the PocketBase admin panel navigate to the `users` table.
+Click the gear icon at the top to open the table's settings and navigate to `Options`.
+
+In the tab `Identity/Password`, toggle the switch and save the configuration.
